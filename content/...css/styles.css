@@ -242,6 +242,9 @@ ul.hh li {
     position: relative;
     text-align: center;
     transition: all 0.5s ease 0s;
+
+    white-space: nowrap; /* Запрещаем перенос строк */
+    text-overflow: ellipsis; /* Добавляем многоточие */
 }
 .product_newes{
     background: #d98468 none repeat scroll 0 0;
@@ -470,6 +473,13 @@ fa-facebook:before {
 }
 .fa-twitter:before {
     content: "\f099";
+}
+.book_name{
+    width: 156px;
+    text-decoration:none;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 .fa-twitter-square:before {

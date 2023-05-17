@@ -475,3 +475,22 @@ fa-facebook:before {
 .fa-twitter-square:before {
     content: "\f081";
 }
+.aside{
+    width: 16%;
+    background-color: #222224;
+    color: white;
+    height: 200vh;
+    float: left;
+    margin-right: 10px;
+}
+.catalog_product {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #c0c0c0;
+    height: 20rem;
+    overflow: hidden;
+    padding: 10px 10px;
+    position: relative;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+    margin-bottom: 20px;
+}

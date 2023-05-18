@@ -82,7 +82,7 @@ include("header.php");
             </button>
         </div>
 
-        <div class="column_lines" style="padding-bottom: 1rem;">
+        <div id="best" class="column_lines" style="padding-bottom: 1rem;">
             <div class="catalog_new container-fluid">
                 <div class="products container-fluid">
                     <!--   <div class="row row-cols-1">
@@ -133,7 +133,7 @@ include("header.php");
             </div>
         </div>
 
-        <div class="column_line">
+        <div id="new" class="column_line">
             <div class="catalog_new container-fluid">
                 <div class="products container-fluid">
                     <!--   <div class="row row-cols-1">
@@ -186,7 +186,7 @@ include("header.php");
             </div>
         </div>
 
-        <div class="column_lines">
+        <div id="cycles" class="column_lines">
             <div class="catalog_new container">
                 <div class="products container-fluid">
                     <div class="row_info">

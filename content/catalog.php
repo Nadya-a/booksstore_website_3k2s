@@ -22,29 +22,29 @@ if ($mysqli->connect_error) {
 
 $sql = " SELECT * FROM book ORDER BY Book_id DESC ";
 $result = $mysqli->query($sql);
+
+$s = " SELECT * FROM publishment ORDER BY Publishment_id";
+$publishments = $mysqli->query($s);
+
+$ss = "SELECT DISTINCT Book_genre FROM book";
+$genres = $mysqli->query($ss);
+
+#$a=$rows['Author_id'];
+#$aut = "SELECT Author_name FROM author WHERE Author_id='$a'";
+#$aa=$mysqli->query($aut);
+#$aaa=mysqli_fetch_row($aa);
+#$author=mysqli_fetch_row($mysqli->query($aut));
+
 ?>
 
 <?php
 include("header.php");
 ?>
     <!-- End -->
-    <body>
-    <aside class="aside">
 
-    </aside>
-    <div class="catalog_lines" style="padding-bottom: 1rem;">
-        <div class="catalog_new container-fluid">
-            <div class="products container-fluid">
-                <!--   <div class="row row-cols-1">
-                       <div class="col">
-                           <div class="head_row"><a style="font-size: 20px"><b>Новинки</b></a></div>
-                       </div>
-                   </div> -->
-
-                <div class="row_info">
-                    <a style="font-size: 22px"><b>Лучшие из лучших</b></a>
-                </div>
-                <div class="row"> <!-- row-cols-5 -->
+    <?php
+    include("aside.php");
+    ?>
                     <?php
                     // LOOP TILL END OF DATA
                     while($rows=$result->fetch_assoc())
@@ -56,7 +56,7 @@ include("header.php");
                         $author=mysqli_fetch_row($mysqli->query($aut));
                         ?>
 
-                        <div class="col-sm-auto col-md-auto col-lg-auto">
+                        <div class="item col-sm-auto col-md-auto col-lg-auto">
                             <div class="product">
                                 <div class="product-img">
                                     <a href="#"><img class="p_img" src="<?php echo $rows['Book_img'];?>" alt=""></a>
@@ -75,8 +75,6 @@ include("header.php");
                         <?php
                     }
                     ?>
-
-
                 </div>
             </div>
         </div>

@@ -222,6 +222,8 @@ ul.hh li {
     margin-top: 0;
     width: 100%;
 }
+.row{
+}
 .row_info{
     height: 3rem;
     padding: 10px 10px;
@@ -242,6 +244,7 @@ ul.hh li {
     position: relative;
     text-align: center;
     transition: all 0.5s ease 0s;
+    margin-bottom: 12px;
 
     white-space: nowrap; /* Запрещаем перенос строк */
     text-overflow: ellipsis; /* Добавляем многоточие */
@@ -337,8 +340,6 @@ ul.hh li {
     font-size: 20px;
     color: white;
     text-decoration:none;
-    text-decoration:none;
-    text-decoration:none;
 }
 
 .footer{
@@ -374,7 +375,7 @@ ul.hh li {
     -ms-flex-pack: justify;
     justify-content: space-between;
     list-style-type: none;
-
+    margin-bottom: 0;
 }
 @media (max-width: 375px) {
     .copyright__list {
@@ -485,13 +486,24 @@ fa-facebook:before {
 .fa-twitter-square:before {
     content: "\f081";
 }
+body{
+    background-color: #222224;
+}
+.catalog_lines{
+    background-color: #222224;
+}
+
 .aside{
     width: 16%;
-    background-color: #222224;
     color: white;
-    height: 200vh;
     float: left;
     margin-right: 10px;
+    padding-left: 20px;
+    border-top: 1px solid dimgrey;
+}
+.aside h{
+    font-size: larger;
+    border-bottom: 1px solid #c0c0c0;
 }
 .catalog_product {
     background: #fff none repeat scroll 0 0;
@@ -503,4 +515,15 @@ fa-facebook:before {
     text-align: center;
     transition: all 0.5s ease 0s;
     margin-bottom: 20px;
+}
+.filters:hover{
+    transform: scale(1.05);
+    transition: 0.20s;
+}
+.filters a{
+    color: white;
+    text-decoration:none;
+}
+.aside ul{
+    list-style-type: none;
 }

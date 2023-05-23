@@ -1,4 +1,6 @@
 <?php
+session_start();
+include("header.php");
 
 // Username is root
 $user = 'root';
@@ -37,9 +39,6 @@ $genres = $mysqli->query($ss);
 
 ?>
 
-<?php
-include("header.php");
-?>
     <!-- End -->
 
     <?php
@@ -68,7 +67,7 @@ include("header.php");
                                 </p>
                                 <div class="credit">
                                     <a style="font-size: 20px"><b><?php echo $rows['Book_price'];?>p.</b></a>
-                                    <button class="buy_button">Купить</button>
+                                    <a href="dobasket.php?type=1&book_id=<?php echo $rows["Book_id"]; ?>"><button class="buy_button" >Купить</button></a>
                                 </div>
                             </div>
                         </div>

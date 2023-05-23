@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Username is root
 $user = 'root';
@@ -68,7 +69,7 @@ while($rows=$result->fetch_assoc())
             </p>
             <div class="credit">
                 <a style="font-size: 20px"><b><?php echo $rows['Book_price'];?>p.</b></a>
-                <button class="buy_button">Купить</button>
+                <a href="dobasket.php?type=1&book_id=<?php echo $rows["Book_id"]; ?>"><button class="buy_button" >Купить</button></a>
             </div>
         </div>
     </div>

@@ -1,3 +1,16 @@
+<?php
+header("Cache-control: no-cache");
+$id_bask=$_COOKIE["Order_id"];
+if(! isset($id_bask))
+{
+    $uniq_ID=uniqid("ID");
+    setcookie("Order_id", $uniq_ID, time()+60*60*24*14);
+}
+else
+    setcookie("Order_id", $id_bask, time()+60*60*24*14);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,15 +40,37 @@
 
         <nav>
             <ul class="hr">
-                <li><a>
-                        <img src="img/favourite.png" class="header_images">
-                    </a></li>
-                <li><a>
-                        <img src="img/cart.png" class="header_images">
-                    </a></li>
-                <li><a>
-                        <img src="img/profile.png" class="header_images">
-                    </a></li>
+                <?php
+                if(isset($_SESSION['login'])){
+
+                    ?>
+                    <li><a href="basket.php" style="text-decoration: none">
+                            <img src="img/basket.png" class="header_images">
+                        </a>
+                    </li>
+                    <li><a href="cabinet.php" style="text-decoration: none">
+                            <img src="img/profile.png" class="header_images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exit.php">
+                            <img src="img/exit.png" class="header_images">
+                        </a>
+                    </li>
+
+                    <?php
+                }
+                else{
+                    ?>
+                    <li>
+                        <a href="login.php">
+                            <img src="img/profile.png" class="header_images">
+                        </a>
+                    </li>
+                    <?php
+                }
+                ?>
+
             </ul>
         </nav>
     </div>
@@ -49,7 +84,7 @@
         </ul>
         <div id="date_info">
             <img src="img/location_icon.png" style="width: 24px; height: 30px;padding-bottom: 6px">
-            <a style="color: white; border-bottom: 1px dashed white;">Казань — доставим 30 марта!</a>
+            <a style="color: white; border-bottom: 1px dashed white;">Казань — доставим 30 мая!</a>
         </div>
     </div>
 </header>

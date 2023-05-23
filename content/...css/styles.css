@@ -527,3 +527,17 @@ body{
 .aside ul{
     list-style-type: none;
 }
+
+.cab, .log{
+    height: 52vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.box{
+    width: 18rem;
+}
+.body{
+    display: flex;
+    justify-content: center;
+}

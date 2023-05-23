@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // Username is root
 $user = 'root';
 $password = '';

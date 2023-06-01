@@ -17,7 +17,7 @@ $id =$_SESSION["id"];
 $message="";
 if($name!="" && $phone!="" && $mail!="" ){
 
-    $replace_symbols=['<', '>', 'script'];
+    $replace_symbols=['<', '>', 'script', '/', 'alert'];
     $name =str_replace($replace_symbols, "", $_POST["name"]);
     $phone =str_replace($replace_symbols, "", $_POST["phone"]);
     $mail =str_replace($replace_symbols, "", $_POST["mail"]);

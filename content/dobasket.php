@@ -45,16 +45,20 @@ else
         }
         mysqli_query($conn, $strSQL1);
     }
+
     else
         if($type==3){
             $strSQL1="DELETE FROM orderlist WHERE Book_id=".$book_id." AND Order_id='".$id_bask."' ";
             mysqli_query($conn, $strSQL1);
         }
+
         else
             if($type==4){
-                $strSQL="DELETE FROM orderlist WHERE Order_id='".$id_bask."' ";
+                $strSQL="DELETE FROM orderlist WHERE Order_id='".$id_bask."'";
                 mysqli_query($conn, $strSQL);
             }
+
+
 include ("basket.php")
 ?>
 

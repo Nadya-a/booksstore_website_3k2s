@@ -79,7 +79,7 @@ if($row["count"]==0){
         </div>
     </div>
 </div>
-<a style="margin-left: 44%; margin-top: 10px; margin-bottom: 20px href="dobasket.php?type=4&book_id=1"><button class="buy_button">Очистить корзину</button></a><br>
+<!--<a style="margin-left: 44%; margin-top: 10px; margin-bottom: 20px href="dobasket.php?type=4&book_id=1"><button class="buy_button">Очистить корзину</button></a><br>-->
 <h4 style="text-decoration: none; color: black; margin-left: 41%"><span>Сумма заказа: </span><?php  print $sum;?> ₽</h4>
 
 <?php

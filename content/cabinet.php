@@ -46,6 +46,7 @@ if($success) {
 <h3 style="margin-left: 30%; margin-top: 2rem; margin-bottom: 2rem">Редактировать персональные данные</h3>
 <section class="cab" id="cab">
   <div class="row">
+      <p>Ваше имя: <?php print $row["User_name"] ?></p>
       <form action="change.php" method="post">
          <input type="text" name="name" value="<?php print $row["User_name"] ?>" placeholder="Имя" class="box"> <br><br>
          <input type="text" name="phone" value="<?php print $row["User_phone"] ?>" placeholder="Адрес" class="box"><br><br>

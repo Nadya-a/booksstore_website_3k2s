@@ -28,10 +28,10 @@ if($type==1){
     if($name!="" && $mail!="" && $phone!="" && $pass!="" && $pass2!=""){
 
         if(strpos($name, "<")!==false || strpos($phone, "<")!==false || strpos($mail, "<")!==false || strpos($pass, "<")!==false || strpos($pass2, "<")!==false){
-            $message="Вы пытаетесь взломать сайт?";
+            $message="Взломщик уходи!!!!!";
         }
         else if(strpos($name, ">")!==false || strpos($phone, ">")!==false || strpos($mail, ">")!==false || strpos($pass, ">")!==false || strpos($pass2, ">")!==false){
-            $message="Вы пытаетесь взломать сайт?";
+            $message="Взломщик уходи!!!!!";
         }
 
         else if($pass!=$pass2){
